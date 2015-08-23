@@ -1,0 +1,84 @@
+<window title=""  border="none"  width="100%" height="100%" 
+	apply="com.zyinfo.core.ui.WorkComposer" >
+	<caption image="/img/title-1a.gif" label=""><toolbarbutton label=""/><label id="nowtm" value=""/></caption>
+	<borderlayout>
+		<west id="west_sort" size="170px" splittable="true" visible="false">
+		<borderlayout>
+			<center border="none" > <!-- style="overflow:hidden;" -->
+			<div height="100%">
+				<tree id="sort_tree" fixedLayout="true" vflex="true" zclass="z-filetree"> 
+					<treecols><treecol id="treeLabel" label="任务类型" width="100%"/></treecols>
+					<treechildren>
+						<treeitem id="rootTreeitem" >
+							<treerow><treecell label="所有类型" /></treerow>
+						</treeitem>
+					</treechildren>
+				</tree>
+				<div id="_overtree" />
+			</div>	
+		   </center>
+		   <south title=""  border="none"  maxsize="450" splittable="true" size="40%" open="false" >
+			<div id="div_onlinehelp" />
+		   </south>	
+		</borderlayout>
+		</west>
+		<center border="none">
+			<borderlayout>
+			<north >
+				<window id="right_topwnd" visible="false">
+				</window>
+			</north>
+			<center flex="true">
+				<window id="list_wnd" width="100%" border="none" apply="com.zyinfo.core.ui.ListwndComp">
+					<div id="div_edit" width="100%" visible="false"/> <!-- contentStyle="overflow:auto" -->
+					<div id="div_other" width="100%" visible="false"/>
+					<div id="div_list" width="100%" height="100%" visible="false">
+					
+		<borderlayout>
+			<north border="none">
+				<div>
+				<toolbar>
+					<hbox align="center"><space spacing="1"/>
+						<listbox id="sort_selct" mold="select"/>
+						<hbox id="hbox_button" spacing="5px"></hbox>
+						<hbox id="hbox_query">
+							<listbox id="cmb_srh_fld" mold="select" width="60px"/>
+							<textbox id="txt_search" width="120px"/>
+							<button id="btnquery" label="查询"/>
+						</hbox>
+						<menubar>
+							<menu label="其他操作"><menupopup id="mnuother"></menupopup>
+							</menu>
+						</menubar>
+						<menubar>
+							<menu label="视图">
+								<menupopup>
+									<menuitem id="mitonlylist" label="列表" checked="false"/>
+									<menuitem id="mitshowall" label="平分" checked="true"/>
+								</menupopup>
+							</menu>
+						</menubar>								
+														
+					</hbox>
+				</toolbar>
+				<mypaging id="page0"  detailed="true"/>
+				</div>
+			</north>
+			<center border="none">
+				<listbox id="datalist" height="100%" width="100%" checkmark="true" multiple="true" vflex="true" />
+			</center>
+		</borderlayout>
+		
+					</div>
+				</window>
+			</center>
+			<south id="my_south" splittable="true" size="35%"  border="none" visible="false">
+				<window id="detail_wnd" border="none" apply="com.zyinfo.core.ui.DetailwndComp"> 
+					<div id="div_detail_1" />
+					<div id="div_detail_2" />			
+				</window>
+			</south>
+			</borderlayout>
+		</center>
+	</borderlayout>
+	</window>

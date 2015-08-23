@@ -1,0 +1,27 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="new page title" border="normal" height="100%" width="100%">
+<borderlayout>
+<north><listbox >
+	<listhead>
+		<listheader label="1" sort="auto" />
+		<listheader label="2" sort="auto" />
+	</listhead>
+	<listitem>
+		<listcell label="" />
+		<listcell label="" />
+	</listitem>
+	<listitem>
+		<listcell label="" />
+		<listcell label="" />
+	</listitem>
+</listbox>
+
+</north>
+<center>
+</center>
+<south>
+</south>
+</borderlayout>
+</window>
+</zk>

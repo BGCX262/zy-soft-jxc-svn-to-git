@@ -1,0 +1,162 @@
+<window id="SingleListWnd" border="none" height="100%" closable="true"  
+ apply="com.zyinfo.icrm.ui.works.myPortlets">
+<portallayout height="100%">
+<portalchildren style="padding: 5px" width="33%" height="100%">
+
+		<panel height="230px" title="任务" border="normal" collapsible="true" maximizable="true" style="margin-bottom:10px">
+			<panelchildren >
+
+<listbox style="border:none;">
+	<listhead><listheader label="" /></listhead>
+	<listitem>
+		<listcell>
+			<hbox spacing="10">
+			<space spacing="1"/>
+			<image src="/images/16×16/rt1.gif" />
+			<label value="基本原则要肝会会地 "/>
+			</hbox>
+		</listcell>
+	</listitem>
+	
+</listbox>				
+			</panelchildren>
+		</panel>
+		
+		<panel height="230px" title="活动" border="normal" collapsible="true" maximizable="true" style="margin-bottom:10px">
+			<panelchildren>
+	
+<listbox style="border:none;">
+	<listhead><listheader label="" /></listhead>
+	<listitem>
+		<listcell>
+			<hbox spacing="10">
+			<space spacing="1"/>
+			<image src="/images/16×16/modify.gif" />
+			<label value="基本原则浏览仍 仍仍人手物的手器夺回梳晓鬟也会地 "/>
+			</hbox>
+		</listcell>
+	</listitem>
+	<listitem>
+		<listcell>
+			<hbox spacing="10">
+			<space spacing="1"/>
+			<image src="/images/16×16/modify.gif" />
+			<label value="有的遥遥遥遥回梳晓鬟也会地 "/>
+			</hbox>
+		</listcell>
+	</listitem>	
+</listbox>	
+			</panelchildren>
+		</panel>
+	</portalchildren>
+	
+	<portalchildren style="padding: 5px" width="33%" height="100%">
+		<panel height="230px" title="公告" border="normal" collapsible="true" maximizable="true" style="margin-bottom:10px">
+			<panelchildren>
+	
+<listbox style="border:none;">
+	<listhead><listheader label="" /></listhead>
+	<listitem>
+		<listcell>
+			<hbox spacing="10">
+			<space spacing="1"/>
+			<image src="/images/16×16/mark0.gif" />
+			<label value="基大朋仍有仍仍佣兵遥沃尔沃的腺体脸有佣老家伙规模dfs则 "/>
+			</hbox>
+		</listcell>
+	</listitem>
+	<listitem>
+		<listcell>
+			<hbox spacing="10">
+			<space spacing="1"/>
+			<image src="/images/16×16/mark0.gif" />
+			<label value="的遥的的佣老家伙规模dfs则 "/>
+			</hbox>
+		</listcell>
+	</listitem>	
+</listbox>				
+			
+			</panelchildren>
+		</panel>
+		<panel height="230px" title="消息" border="normal" collapsible="true" maximizable="true" style="margin-bottom:10px">
+			<panelchildren>
+						
+<listbox style="border:none;">
+	<listhead><listheader label="" /></listhead>
+	<listitem>
+		<listcell>
+			<hbox spacing="10">
+			<space spacing="1"/>
+			<image src="/images/16×16/Reminder.gif" />
+			<label value="收佛挡杀佛枷国 "/>
+			</hbox>
+		</listcell>
+	</listitem>
+	<listitem>
+		<listcell>
+			<hbox spacing="10">
+			<space spacing="1"/>
+			<image src="/images/16×16/Reminder.gif" />
+			<label value="顶替顶替顶替枯 "/>
+			</hbox>
+		</listcell>
+	</listitem>	
+</listbox>					
+			</panelchildren>
+		</panel>
+		
+	</portalchildren>
+	
+	<portalchildren style="padding: 5px" width="34%" >
+		<panel height="230px" title="日程" border="normal" collapsible="true" maximizable="true" style="margin-bottom:10px">
+			<panelchildren>
+				<!-- iframe width="100%" height="100%" src="/userview/usercalend.zul" /  -->
+				
+<listbox style="border:none;">
+	<listhead><listheader label="" /></listhead>
+	<listitem>
+		<listcell>
+			<hbox spacing="10">
+			<space spacing="1"/>
+			<image src="/images/16×16/datetime.gif" />
+			<label value="检仍主的杀佛枷国 "/>
+			</hbox>
+		</listcell>
+	</listitem>
+	<listitem>
+		<listcell>
+			<hbox spacing="10">
+			<space spacing="1"/>
+			<image src="/images/16×16/datetime.gif" />
+			<label value=" 主手机加know；替顶替枯 "/>
+			</hbox>
+		</listcell>
+	</listitem>	
+</listbox>					
+			</panelchildren>
+		</panel>
+
+		<panel height="230px" title="在线用户" border="normal" collapsible="true" maximizable="true" style="margin-bottom:10px">
+			<panelchildren>
+
+<listbox style="border:none;">
+	<listhead><listheader label="" /></listhead>
+	<listitem>
+		<listcell>
+			<hbox spacing="10">
+			<space spacing="1"/>
+			<image src="/images/16×16/huiyuan.gif" />
+			<label value="管理员"/><label value=" [08:44:52]上线"/>
+			</hbox>
+		</listcell>
+	</listitem>
+	
+</listbox>
+				
+			</panelchildren>
+		</panel>		
+	</portalchildren>
+	
+</portallayout>
+
+</window>

@@ -1,0 +1,11 @@
+<window>
+  <listbox id="quarter" mold="select" rows="1" onSelect="quarter()">
+  	<listitem value="0" label="Select"/>
+  	<listitem value="1" label="Quarter 1"/>
+  	<listitem value="2" label="Quarter 2"/>
+  	<listitem value="3" label="Quarter 3"/>
+  	<listitem value="4" label="Quarter 4"/>
+  </listbox>
+  <spreadsheet id="balance" url="/zul/demo.xls" maxrow="20" maxcolumn="20" height="600px" width="800px" />
+  
+</window>

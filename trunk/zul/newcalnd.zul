@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?component name="create" macro-uri="/userview/createEvent.zul"?>
+<?component name="edit" macro-uri="/userview/editEvent.zul"?>
+<zk>
+<window id="SingleListWnd" border="no" height="100%" width="100%"   
+ apply="com.zyinfo.icrm.ui.works.myCalnd"> 
+
+<calendars  id="cal" firstDayOfWeek="Monday" timeZone="时刻=GMT+8" >
+<toolbar sclass="calendar-toolbar">
+<div align="center"><label id="lbl_curYF" value="2009年11月"/></div>
+</toolbar>
+</calendars>
+<create id="creationDialog" />
+<edit id="updateDialog" />
+</window>
+</zk>

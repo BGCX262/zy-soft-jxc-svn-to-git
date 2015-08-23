@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+
+<window id="mini_chatwin" title="消息提示" width="300px" border="normal" visible="true"  apply="com.zyinfo.icrm.ui.chat.ChatComposer">
+ 
+	<div id="dv" visible="true" style="height: 200px; overflow:scroll">
+  		<vbox id="msgBoard"/>
+	</div>
+	<hbox id="input" visible="false">
+		<textbox id="msg" style="width:220px"/>
+		<button id="send" label="发送"/>
+	</hbox>
+	<div id="login" style="width: 200px">
+  		<vbox>
+    	<label value="填写称呼" style="font-weight: bold"/>
+   		<hbox> 妮称:<textbox id="nickname" constraint="no empty"/>
+    	</hbox>
+    	<button id="entRoom" label="进入" /> 
+  		</vbox>
+	</div>
+	
+	<hbox><button id="exit" label="退出" /></hbox>
+</window>
+
+</zk>

@@ -1,0 +1,4 @@
+<window border="none" height="100%"  apply="com.zyinfo.oudeng.ui.MyDesktops">
+<portallayout id="_portlayout" height="100%">
+</portallayout>
+</window>

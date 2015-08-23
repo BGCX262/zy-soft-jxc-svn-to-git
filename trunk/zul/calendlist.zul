@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+<window id="CalendListWnd" border="normal" title="日程安排列表" closable="true" width="780px" height="500px"  
+ apply="com.zyinfo.icrm.ui.works.CalendListView">
+<borderlayout>
+<north size="60px" border="none"> 
+<div>
+	<toolbar align="end"><button id="_btnShow" label="详细" /><button id="_btnExit" label="返回" />
+	</toolbar>
+	<paging id="calpage"  detailed="true"/>
+</div>	
+</north>
+<center border="none">
+	<listbox id="callist" height="100%" width="100%" checkmark="true" multiple="true" vflex="true">
+		<listhead>
+			<listheader label="开始时间" sort="auto" width="25%"/>
+			<listheader label="结束时间" sort="auto" width="25%"/>
+			<listheader label="标题" width="36%"/>
+			<listheader label="标志" width="10%"/>
+		</listhead>
+	</listbox>
+</center>
+</borderlayout>
+</window>
+</zk>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+<window id="NormalEditWnd" border="normal" title=" " closable="true" width="780px"  
+ apply="com.zyinfo.core.ui.NormalEditComp" >
+</window>
+</zk>

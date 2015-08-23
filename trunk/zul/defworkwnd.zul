@@ -1,0 +1,32 @@
+﻿<zk>
+<window id="_defWorkWnd" title="" border="normal"  width="100%" height="100%" 
+  	apply="com.zyinfo.icrm.ui.iWorkComposer">
+	<caption label="说明"></caption>
+	<borderlayout>
+		<west id="west_sort" size="150px" splittable="true" border="none">
+		<borderlayout>
+			<center border="none" > <!-- style="overflow:hidden;" -->
+				<tree id="sort_tree" fixedLayout="true" vflex="true"> 
+					<treecols><treecol id="treeLabel" label="BBB" width="100%"/></treecols>
+					<treechildren>
+						<treeitem id="rootTreeitem" value="00">
+							<treerow><treecell label="所有类型" /></treerow>
+						</treeitem>
+						<treeitem >
+							<treerow><treecell label="AAA1" /></treerow>
+						</treeitem>
+					</treechildren>
+				</tree>
+		   </center>
+		   <south title="操作助手" open="true"  maxsize="450" splittable="true" size="50%" border="none">
+				<div id="div_help" />
+		   </south>
+		</borderlayout>
+		</west>
+		<center id="_center_list" border="none">
+			
+		</center>
+	</borderlayout>
+	<div id="div_other" />
+</window>
+</zk>

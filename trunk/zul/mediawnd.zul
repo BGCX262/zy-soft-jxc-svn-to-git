@@ -1,0 +1,9 @@
+<zk>
+<window id="my_media_wnd" border="none"  width="80%"  height="650px"    
+apply="com.zyinfo.core.ui.ShowMediawnd" >
+<toolbarbutton id="btnReturn" label="返回" style="position: absolute;right:5px;top:5px;"/>
+<div id="d_waiting">请稍侯.......</div>
+<iframe id="_ifrm_wnd" width="100%" height="640px"/>
+
+</window>
+</zk>

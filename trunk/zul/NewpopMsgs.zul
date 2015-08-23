@@ -1,0 +1,44 @@
+<zk>
+<window id="popuNewWnd" title="来电弹屏" border="normal" width="215px" closable="true"  
+	onClose="self.visible=false;event.stopPropagation();"   
+	action="onshow:anima.appear(#{self});onhide:anima.fade(#{self})"  
+	apply="com.zyinfo.icrm.ui.tipmsg.NewMsgComp"  >
+<!--   -->
+<grid oddRowSclass="non-odd" style="overflow-x:none" >
+	<columns><column align="right" width="80px" /><column label=""/></columns>
+	<rows>
+		<row><label value="电话号码" /><textbox id="txtteleno" width="110px"/></row>
+		<row><label value="开始时间"/><label id="lblbegtime" /></row>
+		<row><label value="通话时长"/><label id="lblconntime" /></row>
+		<row><label value="状态"/><label id="lblstatue" /></row>
+		<row><label value="单位名称"/><label id="lbldwmc" /></row>
+		<row><label value="联系人"/><label id="lbllxr" /></row>
+		<row><label value="详情"/><hbox><button id="btncustmer" label="查阅详情" />
+			 <button id="btnaddcustm" label="新建" visible="false"/></hbox></row>
+		<row><label value="客服"/>
+			<hbox spacing="1">
+			<button id="btnprecsvr" label="服务登记" visible="true" />
+			</hbox>
+		</row>			 
+		<row><label value="选项" />
+			<vbox>
+				<checkbox id="chkautopop" label="自动弹屏" checked="true"/>
+				<checkbox id="chkauotrec" label="自动录音" checked="true"/>
+			</vbox>
+		</row>
+		<row visible="false"><button id="btnpickup" label="接听" visible="false"/>
+			<hbox spacing="1">
+			<button id="btnprerec" image="/img/16X16/ArrowLeft-16x16.png" label="" visible="false"/>		
+			<button id="btnnextrec" label="" image="/img/16X16/ArrowRight-16x16.png" visible="false"/>
+			<button id="btndialno" label="拨号" visible="false"/>
+			<button id="btnplayit" label="播放" visible="false" />
+			</hbox>
+		</row>
+		
+	</rows>	
+</grid>
+<div id="div_popdetail" />
+<textbox id="sourcefile" visible="false"/>
+</window>
+
+</zk>

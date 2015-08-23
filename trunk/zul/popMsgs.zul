@@ -1,0 +1,92 @@
+<zk>
+<window id="popuListWnd" title="电话弹屏信息" border="normal" top="50px" width="800px" height="540px" sizable="true" visible="true"    
+ onClose="self.visible=false;event.stopPropagation();" closable="true"    
+ apply="com.zyinfo.icrm.ui.tipmsg.MsgComposer">  
+<!-- action="onshow:anima.appear(#{self});onhide:anima.fade(#{self})"  -->
+<caption>
+	<button id="btnTomini" label="∷" visible="false"/>
+	<button id="btnResizeMe" visible="false"/> 
+</caption>
+<borderlayout>
+<west title="电话机状态" collapsible="true" splittable="true" border="none" size="150px" autoscroll="false" >
+<vbox>
+<div style="height:470px;width:150px;overflow:scroll;"> 
+  <vbox id="msgBoard" />
+</div>
+</vbox> 
+</west>
+<center> 
+<borderlayout>
+<north splittable="true" size="25%" >
+<vbox>
+<div id="div_server">
+<hbox><space spacing="10"/>
+<button id="btnPlay" label="播放" />
+<button id="btnSet" label="设置" />
+<textbox id="txtHM"/>
+<button id="btnDial" label="拨号"/>
+<button id="btnPickUp" label="摘机" />
+<button id="btnPutDown" label="挂机" />
+<button id="btnHidden" label="关闭" />
+<textbox id="editType" visible="false" />	
+</hbox>
+</div>
+
+<listbox id="teleListbox" checkmark="true" multiple="true" />
+
+<div id="div_setting" visible="false">
+<button id="OpenDev" label="打开设备" />
+<button id="CloseDev" label="关闭设备" />
+<button id="SaveSet" label="确定" />
+<textbox id="cursndfile" visible="false" />
+<button id="doPlay" label="P" visible="false" >
+	<attribute name="onClick" >{
+	Clients.evalJavaScript("play_song('"+cursndfile.value+"');"); 
+	}</attribute>
+</button>
+<button id="doStop" label="T" visible="false" >
+	<attribute name="onClick" >{
+	Clients.evalJavaScript("stop_song(); setTimeout('AfterPlayProc();',5000);"); 
+	}</attribute>
+</button>
+</div>
+<div id="div_music" visible="false" xmlns:h="http://www.w3.org/1999/xhtml" >
+<h:a/>	       
+</div>
+</vbox>
+</north>
+<center>
+<window id="tel_khinf_wnd">
+<tabbox>
+  <tabs>
+	<tab label="客户信息" />
+	<tab label="关联活动" />
+	<tab label="电话摘要" />
+  </tabs>
+	<tabpanels>
+		<tabpanel id="tel_kh_panel_1" />
+		<tabpanel id="tel_kh_panel_2" />
+		<tabpanel id="tel_kh_panel_3" >
+		<vbox><textbox id="tel_recod" rows="5" width="350px" />
+		<button label="保存" />
+		</vbox>
+		</tabpanel>
+	</tabpanels>
+</tabbox>
+</window>
+</center>
+</borderlayout>
+</center>
+</borderlayout>
+</window>
+
+<script type="text/javascript">
+function AfterPlayProc(){
+	var stopa = document.getElementsByTagName('a');
+	for(i=0;i&lt;stopa.length;i++){
+		comm.sendEvent(stopa[i], 'onClick');
+	}
+}
+</script>
+
+</zk>

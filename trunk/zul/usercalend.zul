@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+<window id="myCalend" title="" use="com.zyinfo.icrm.ui.ShowCalend">
+<grid fixedLayout="true" width="95%" >
+	<columns>
+		<column width="25px" />
+		<column width="125px" />
+		<column label=""/>
+		<!-- sortAscending="&#36;{asc}" sortDescending="&#36;{dsc}" -->
+	</columns>	
+	<rows id="richengrow">
+	<!-- detail fulfill="onOpen" -->
+	</rows>
+</grid>
+</window>
+</zk>

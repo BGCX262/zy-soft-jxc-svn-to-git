@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+index.zul
+
+{{IS_NOTE
+	Purpose:
+		
+	Description:
+		
+	History:
+		Wed Oct  3 16:01:00     2007, Created by Feifei Wang
+}}IS_NOTE
+
+Copyright (C) 2007 Feifei Wang. All Rights Reserved.
+
+{{IS_RIGHT
+}}IS_RIGHT
+-->
+<?page title="User Info" ?>
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="w" ?>
+
+<window width="100%" id="userWindow" title="&#36;{w:l('user.info')}" border="normal" 
+	use="org.wff.business.sys.user.action.UserWindow" 
+	xmlns:y="http://www.zkoss.org/2007/yui">
+	<vbox width="100%" spacing="20px">
+		<window id="wnd" title="INFO" closable="true" border="normal" position="center"
+			width="80%" visible="false"></window>
+		<y:grid id="userGrid" editable="true"
+			use="org.wff.business.sys.user.action.UserGrid" width="100%">
+			<y:columns>
+				<y:column editortype="text" sort="auto"
+					label="&#36;{w:l('user.id')}" />
+				<y:column editortype="text" sort="auto"
+					label="&#36;{w:l('user.name')}" />
+				<y:column editortype="text" sort="auto"
+					label="&#36;{w:l('user.password')}" />
+				<y:column editortype="text" sort="auto"
+					label="&#36;{w:l('user.email')}" />
+			</y:columns>
+		</y:grid>
+
+		<hbox spacing="10px">
+			<button label="保存"
+				image="/img/16/filesave.png" forward="onSave"
+				style="font-size:12px" />
+			<button label="添加"
+				image="/img/16/b_insrow.png" forward="onAdd"
+				style="font-size:12px" />
+			<button label="删除"
+				image="/img/16/b_deltbl.png" forward="onDelete"
+				style="font-size:12px" />
+		</hbox>
+
+		<y:grid id="userInfoGrid" width="100%" editable="true"
+			trackMouseOver="false">
+			<y:columns sizable="false">
+				<y:column editortype="readonly"
+					label="&#36;{w:l('user.info')}" />
+				<y:column label="&#36;{w:l('user.value')}" />
+			</y:columns>
+			<y:rows>
+				<y:row>
+					&#36;{w:l('user.id')}
+					<y:label id="userId" use="org.wff.business.sys.user.component.UserInfoLabel"/>
+				</y:row>
+				<y:row>
+					&#36;{w:l('user.name')}
+					<y:label id="userName" use="org.wff.business.sys.user.component.UserInfoLabel"/>
+				</y:row>
+				<y:row>
+					&#36;{w:l('user.password')}
+					<y:label id="userPassword" use="org.wff.business.sys.user.component.UserInfoLabel"/>
+				</y:row>
+				<y:row>
+					&#36;{w:l('user.email')}
+					<y:label id="userEmail" use="org.wff.business.sys.user.component.UserInfoLabel"/>
+				</y:row>
+			</y:rows>
+		</y:grid>
+		<label value="&#36;{w:l('copyright')}"/>
+		<label value="&#36;{w:l('powered')}"/>
+	</vbox>
+</window>

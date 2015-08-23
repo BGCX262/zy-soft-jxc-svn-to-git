@@ -1,0 +1,40 @@
+<zk>
+<window id="_defListWnd" width="100%" height="100%" border="none" apply="com.zyinfo.icrm.ui.iListviewComposer">
+<borderlayout>
+	<center flex="true"> <!-- SHOW LIST WINDOW -->
+		<div visible="true">
+			<div id="_div_edit" visible="false"/> <!-- contentStyle="overflow:auto" -->
+			
+			<!--  div id="_div_list" width="100%" visible="true" -->
+				<hbox>
+					<hbox id="hbox_button" spacing="5px">
+						<button id="btnDetail" label="明细"/>
+						<button id="btnADD" label="添加"/>
+						<button id="btnModi" label="修改"/>
+						<button id="btnDele" label="删除"/>
+					</hbox>
+					<hbox>
+						<combobox id="cmb_srh_fld" />
+						<textbox id="txt_search" />
+						<button id="btnQuery" label="查询"/>
+						<button id="btnCustQuery" label="高级查询"/>
+						<button id="btnRefresh" label="刷新" visible="false"/>
+					</hbox>
+				</hbox>
+				<paging id="pg0"  detailed="true"/>
+				<listbox id="datalist" checkmark="true" multiple="true" />
+			<!-- /div -->
+		
+		</div>
+	</center>
+	<south id="my_south" title="明细视图" splittable="true" size="35%" collapsible="true" border="none">
+		<!-- SHOW DETAIL WINDOW -->
+		<window id="_detail_wnd" border="none" apply="com.zyinfo.icrm.ui.iDetailComposer"> 
+			<div id="div_detail_1" />
+			<div id="div_detail_2" />			
+		</window>
+	</south>
+</borderlayout>
+
+</window>
+</zk>

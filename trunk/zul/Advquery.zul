@@ -1,0 +1,7 @@
+<!--  高级查询 -->
+<?xml version="1.0" encoding="utf-8"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+<window id="AdvanceQueryWnd" border="normal" title="高级查询设置" closable="true" width="720px" height="500px"    
+  apply="com.zyinfo.icrm.ui.AdvQuerywnd" >
+</window>
+</zk>

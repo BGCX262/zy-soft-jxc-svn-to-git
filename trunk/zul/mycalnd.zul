@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?component name="divtab" macro-uri="/userview/divtab.zul"?>
+<?component name="divarrow" macro-uri="/userview/divarrow.zul"?>
+<?component name="create" macro-uri="/userview/createEvent.zul"?>
+<?component name="edit" macro-uri="/userview/editEvent.zul"?>
+<zk>
+<window id="CalendarMainWnd" border="no" height="100%" width="100%"   
+ apply="com.zyinfo.icrm.ui.works.MyCalnd"> 
+<zscript>
+<![CDATA[//@IMPORT
+	import java.util.Calendar;
+	import java.text.SimpleDateFormat;
+]]>
+</zscript>
+<calendars id="cal" firstDayOfWeek="Monday" timeZone="时刻=GMT+8" >
+<toolbar sclass="calendar-toolbar">
+<div class="float-left">
+	<hbox>
+	<divarrow type="arrow-left" command='cal.previousPage();Events.postEvent("onCreate", lblQJ,null);'/>
+	<divarrow type="arrow-right" command='cal.nextPage();Events.postEvent("onCreate", lblQJ,null);'/>
+	<divtab command='cal.mold = "default";Events.postEvent("onClick", goToday,null);' text="今天"/>
+	<div height="14px">
+	    <datebox id="bgDate" buttonVisible="false"/>至
+	    <datebox id="edDate" buttonVisible="false"/>
+		<label id="lblQJ" visible="false" />
+		<label id="lblTotal" value="共有  条" />
+		<button id="goToday" visible="false"/>
+	</div>
+	</hbox>
+</div>
+<div class="float-right">
+	<hbox>
+	<divtab command='cal.mold = "default";cal.days = 1;Events.postEvent("onCreate",lblQJ,null);' text="日"/>
+	<divtab command='cal.mold = "default";cal.days = 7;Events.postEvent("onCreate",lblQJ,null);' text="周"/>
+	<divtab command='cal.mold = "month";Events.postEvent("onCreate",lblQJ,null);' text="月"/>
+	<divtab command='Events.postEvent("onShowlist",goToday,null);' text="列表"/>
+	</hbox>
+</div>
+</toolbar>
+</calendars>
+<create id="creationDialog" />
+<edit id="updateDialog" />
+</window>
+</zk>

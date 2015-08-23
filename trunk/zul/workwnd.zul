@@ -1,0 +1,81 @@
+<window border="none" height="100%" apply="com.zyinfo.core.ui.WorkwndPro">
+<borderlayout>
+<west id="west_sort" border="none" size="170px" splittable="true" visible="false">
+<borderlayout>
+	<center border="none" >
+	<div height="100%">
+		<tree id="sort_tree" fixedLayout="true" vflex="true" zclass="z-filetree"> 
+			<treecols><treecol id="treeLabel" label="任务类型" width="100%"/>
+			</treecols>
+			<treechildren>
+				<treeitem id="rootTreeitem" >
+					<treerow><treecell label="所有类型" /></treerow>
+				</treeitem>
+			</treechildren>
+		</tree>
+		<div id="_overtree" />
+	</div>	
+   </center>
+   <south maxsize="450" splittable="true" size="40%" open="false" visible="true">
+	<div id="div_onlinehelp" />
+   </south>	
+</borderlayout>
+</west>
+<center>
+<window id="list_wnd" width="100%" height="100%" border="none" apply="com.zyinfo.core.ui.ListviewWndPro">
+<style>
+.hdoverflow{
+ text-overflow: ellipsis; -o-text-overflow: ellipsis;  
+ white-space: nowrap; overflow: hidden; display:block;
+}
+</style>
+<div id="div_list" width="100%" height="100%" visible="true">
+<borderlayout>
+<north border="none">
+<div>
+<toolbar>
+<hbox align="center"><space spacing="1"/>
+	<listbox id="sort_selct" mold="select" visible="false"/>
+	<hbox id="hbox_button" spacing="5px"></hbox>
+	<hbox id="hbox_query">
+		<listbox id="cmb_srh_fld" mold="select" width="60px"/>
+		<textbox id="txt_search" width="120px" value="11"/>
+		<button id="btnquery" label="查询"/>
+	</hbox>
+	<menubar>
+		<menu label="其他操作"><menupopup id="mnuother"></menupopup>
+		</menu>
+	</menubar>
+	<menubar>
+		<menu label="视图">
+		<menupopup>
+			<menuitem id="mitonlylist" label="列表" checked="false"/>
+			<menuitem id="mitshowall" label="平分" checked="true"/>
+		</menupopup>
+		</menu>
+	</menubar>					
+</hbox>
+</toolbar>
+<mypaging id="page0"  detailed="true"/>
+</div>
+</north>
+<center border="none">
+	<listbox id="datalist" height="100%" width="100%" checkmark="true" multiple="true" vflex="true" />
+</center>
+<south id="my_south" border="none" splittable="true" size="35%">
+<window id="detail_wnd" width="100%" height="100%" border="none" apply="com.zyinfo.core.ui.DetailwndPro"> 
+	<div id="div_detail_1" />
+	<div id="div_detail_2" />			
+</window>
+</south>
+</borderlayout>
+</div>
+<div id="div_edit" zindex="990" width="10%" height="10%" style="filter:alpha(opacity=100);background:#ffffff;position:absolute;top:1px;left:1px;" visible="false"/>
+<!--  position:relative; -->
+<div id="div_other" width="100%" height="100%" visible="false"/>
+</window>
+</center>
+</borderlayout>
+</window>
+
+

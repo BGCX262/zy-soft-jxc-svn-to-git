@@ -1,0 +1,51 @@
+<zk>
+<window id="createMyEvent" title="新建日程安排" border="normal" mode="popup" width="420px" visible="false" closable="true"  
+ apply="com.zyinfo.icrm.ui.works.EventCreation" onClose="self.visible=false;event.stopPropagation();">
+<grid fixedLayout="true" oddRowSclass="no-odd">
+	<columns>
+		<column width="80px"  align="right"/>
+		<column />
+	</columns>
+	<rows>
+		<row>标题:<textbox id="pptitl" width="300px" /></row>				
+		<row>开始时间:<div><datebox id="ppbegin" /><listbox mold="select" id="ppbt" /></div>
+		</row>
+		<row>结束时间:
+			<div>
+				<datebox id="ppend" /><listbox mold="select" id="ppet" />
+				全天:<checkbox id="ppallDay" onCheck='ppbt.visible = !self.checked;ppet.visible = !self.checked' />
+			</div>
+		</row>
+		<row>颜色:<combobox id="ppcolor" readonly="true" style="color:#D96666;font-weight: bold;" onCreate="self.selectedIndex = 0">
+			<attribute name="onSelect">
+				switch(self.getSelectedIndex()) {
+				case 0: self.style = "color:#D96666;font-weight: bold;"; break;
+				case 1: self.style = "color:#668CD9;font-weight: bold;"; break;
+				case 2: self.style = "color:#4CB052;font-weight: bold;"; break;
+				case 3: self.style = "color:#BFBF4D;font-weight: bold;"; break;
+				case 4: self.style = "color:#B373B3;font-weight: bold;"; break;
+				}
+			</attribute>
+			<comboitem sclass="red" label="红色" value="#A32929,#D96666"/>
+			<comboitem sclass="blue" label="蓝色" value="#3467CE,#668CD9"/>
+			<comboitem sclass="green" label="绿色" value="#0D7813,#4CB052"/>
+			<comboitem sclass="khaki" label="黄褐色" value="#88880E,#BFBF4D"/>
+			<comboitem sclass="purple" label="紫色" value="#7A367A,#B373B3"/>
+		</combobox>
+		</row>			
+		<row>内容:<textbox id="ppcnt" multiline="true" rows="3" width="300px" />
+		</row>
+		<row>提醒:<checkbox id="pplocked" />
+		</row>
+	</rows>
+</grid>
+<div height="10px" />
+<div align="center">
+	<button id="btnAddNews" label="确定" />
+	<space spacing="10" />
+	<button id="btnCancel" label="取消" /> 
+</div>
+<div height="15px" />			
+</window>
+</zk>
+

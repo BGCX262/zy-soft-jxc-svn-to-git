@@ -1,0 +1,6 @@
+<zk>
+<window border="normal">
+<label id="lbl_msg" />
+
+</window>
+</zk>
